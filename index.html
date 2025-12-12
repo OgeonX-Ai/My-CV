@@ -1,50 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Kim Harjamäki – Azure Architect</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="cv.css">
+  <title>Kim Harjamäki — Azure Architect & Senior DevOps Engineer</title>
+  <meta name="description" content="Online CV — Kim Harjamäki, Azure Architect & Senior DevOps Engineer. Cloud, DevOps, Automation, Security, Reliability." />
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+  <a class="skip" href="#content">Skip to content</a>
 
-<header>
-  <h1>Kim Harjamäki</h1>
-  <p>Azure Architect • DevOps • Cloud & Automation</p>
-  <p>
-    Helsinki, Finland •
-    <a href="https://www.linkedin.com/in/kim-harjam%C3%A4ki/">LinkedIn</a> •
-    <a href="mailto:you@email.com">Email</a>
-  </p>
-</header>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <div class="brand__name">Kim Harjamäki</div>
+        <div class="brand__role">Azure Architect • Senior DevOps Engineer • Cloud & Automation</div>
+      </div>
 
-<section>
-  <h2>Summary</h2>
-  <p>
-    Azure Architect with strong experience in hybrid cloud, DevOps,
-    automation, and enterprise Azure environments.
-  </p>
-</section>
+      <div class="actions">
+        <button class="btn btn--primary" type="button" onclick="window.print()" title="Print or Save as PDF">
+          <span class="btn__icon">⬇</span>
+          Download / Print PDF
+        </button>
+      </div>
+    </div>
+  </header>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>Azure (Arc, AKS, Data Factory, Monitor)</li>
-    <li>DevOps, CI/CD, GitHub Actions</li>
-    <li>Python, PowerShell, Automation</li>
-    <li>Security & Governance (ISO-27000 mindset)</li>
-  </ul>
-</section>
+  <main id="content" class="wrap">
+    <section class="hero card">
+      <div class="hero__grid">
+        <div>
+          <h1 class="h1">Kim Harjamäki</h1>
+          <p class="subtitle">Azure Architect & Senior DevOps Engineer</p>
 
-<section>
-  <h2>Experience</h2>
-  <h3>Azure Architect – Innofactor</h3>
-  <p>Designed and implemented Azure data platforms and automation solutions.</p>
-</section>
+          <div class="meta">
+            <span>Helsinki, Finland</span>
+            <span class="dot">•</span>
+            <a href="https://www.linkedin.com/in/kim-harjam%C3%A4ki/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/OgeonX-Ai" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dot">•</span>
+            <a href="https://ogeonx-ai.github.io/kim-ai-voice-demo/" target="_blank" rel="noreferrer">AI Voice Demo (WIP)</a>
+            <!-- Optional email:
+            <span class="dot">•</span>
+            <a href="mailto:you@email.com">you@email.com</a>
+            -->
+          </div>
 
-<footer>
-  <button onclick="window.print()">Download as PDF</button>
-</footer>
+          <div class="chips">
+            <span class="chip">Azure</span>
+            <span class="chip">DevOps</span>
+            <span class="chip">IaC (Terraform/Bicep)</span>
+            <span class="chip">AKS / Containers</span>
+            <span class="chip">Security (ISO 27000)</span>
+            <span class="chip">Reliability / SRE</span>
+          </div>
+        </div>
 
+        <aside class="hero__aside">
+          <div class="kpi">
+            <div class="kpi__label">Experience</div>
+            <div class="kpi__value">20+ years</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi__label">Focus</div>
+            <div class="kpi__value">Automation & Cloud Reliability</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi__label">Domains</div>
+            <div class="kpi__value">Hybrid • DevSecOps • SaaS</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="card">
+        <h2 class="h2">Summary</h2>
+        <p class="p">
+          With 20+ years in IT, I design and build scalable Azure and DevOps environments with a strong focus on automation,
+          Infrastructure as Code, cloud security, and reliability. My background covers Azure architecture, CI/CD, AKS,
+          monitoring, hybrid setups, and ISO 27000–aligned governance.
+        </p>
+        <p class="p">
+          Recently, I’ve expanded into real-time AI voice development, building web and mobile demos that integrate speech-to-text,
+          text-to-speech, and agent-style automation — combining cloud engineering with practical applied AI.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Top Skills</h2>
+        <ul class="pilllist">
+          <li>Microsoft Azure (IaaS/PaaS)</li>
+          <li>Azure DevOps, GitHub Actions, CI/CD</li>
+          <li>IaC: Terraform, Bicep</li>
+          <li>AKS, containers, hybrid cloud</li>
+          <li>Security & governance (ISO 27000 mindset)</li>
+          <li>Automation: Python, PowerShell</li>
+          <li>Observability, reliability, SRE practices</li>
+          <li>Azure Data Factory, Databricks (delivery & platforms)</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card">
+      <h2 class="h2">Experience</h2>
+
+      <!-- Innofactor -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">Azure Architect & Senior DevOps Engineer — Innofactor</h3>
+            <div class="job__meta">
+              <span>Jun 2023 – Feb 2025</span><span class="dot">•</span>
+              <span>Espoo, Uusimaa, Finland (Remote)</span>
+            </div>
+          </div>
+          <div class="job__tag">Azure • DevOps • AI initiatives</div>
+        </div>
+        <p class="p">
+          Contributed to cloud-infrastructure projects, DevOps practices, and internal AI initiatives, supporting high-profile customers
+          such as the Finnish Tax Administration (Verohallinto).
+        </p>
+        <ul class="bullets">
+          <li>Designed and implemented Azure cloud solutions using IaC and automation tools.</li>
+          <li>Developed and optimised CI/CD pipelines with Azure DevOps.</li>
+          <li>Improved automation, operational efficiency, and service reliability via internal AI projects.</li>
+          <li>Supported cloud strategy, security improvements, and DevOps best practices for Verohallinto.</li>
+          <li>Ensured deployments aligned with ISO 27000 security principles.</li>
+        </ul>
+      </article>
+
+      <!-- Clausion / insightsoftware -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">Azure DevOps Engineer — Clausion (insightsoftware)</h3>
+            <div class="job__meta">
+              <span>Mar 2019 – Dec 2022</span><span class="dot">•</span>
+              <span>Espoo, Uusimaa, Finland</span>
+            </div>
+          </div>
+          <div class="job__tag">SaaS • CI/CD • Compliance</div>
+        </div>
+        <p class="p">
+          Supported Azure architecture and DevOps for SaaS products within financial reporting and EPM tooling.
+        </p>
+        <ul class="bullets">
+          <li>Built and maintained Azure DevOps pipelines across dev/test/prod environments.</li>
+          <li>Administered and automated Jira and Confluence to improve delivery visibility.</li>
+          <li>Applied ISO 27000-aligned cloud security practices and performed compliance checks.</li>
+          <li>Optimised performance and cost through right-sizing, autoscaling, and housekeeping automation.</li>
+          <li>Supported backup/restore/site recovery and Dual-DC configurations for continuity.</li>
+          <li>Acted as a DevOps advocate: knowledge transfer across dev and ops.</li>
+        </ul>
+      </article>
+
+      <!-- Fujitsu Portugal -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">IT Specialist / System Analyst II — Fujitsu Portugal</h3>
+            <div class="job__meta">
+              <span>Jan 2018 – Mar 2018</span><span class="dot">•</span>
+              <span>Lisbon Area, Portugal</span>
+            </div>
+          </div>
+          <div class="job__tag">Tier-2 • Migration</div>
+        </div>
+        <p class="p">
+          Tier-2 hardware and customer support for Fujitsu, Lenovo, and HP workstations/servers during a Finnish support migration.
+        </p>
+        <ul class="bullets">
+          <li>Managed incident queue within SLA targets; improved handling efficiency via documentation.</li>
+          <li>Coordinated spare parts logistics and vendor escalations for priority cases.</li>
+          <li>Supported diagnostics and firmware updates to reduce repeat incidents.</li>
+          <li>Delivered support in Finnish and English; enabled knowledge transfer with Finnish teams.</li>
+        </ul>
+      </article>
+
+      <!-- DXC -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">SAN & Storage Engineer (Release Team, Contractor Seiteq) — DXC Technology</h3>
+            <div class="job__meta">
+              <span>Apr 2017 – Dec 2017</span><span class="dot">•</span>
+              <span>Bratislava</span>
+            </div>
+          </div>
+          <div class="job__tag">VPC • Security Officer</div>
+        </div>
+        <p class="p">
+          Delivered cloud consultancy and SAN/storage engineering for a Virtual Private Cloud platform, working in Agile/Scrum release teams.
+        </p>
+        <ul class="bullets">
+          <li>Designed SAN/storage using Brocade switches and HPE 3PAR arrays.</li>
+          <li>Built automation workflows to streamline provisioning and configuration.</li>
+          <li>Supported security initiatives aligned to PCI-DSS, FedRAMP, SOC, ISO 27000.</li>
+          <li>Provided L4 incident/problem support during datacentre outages; executed DR procedures.</li>
+          <li>Acted as Security Officer ensuring compliance with corporate security policies.</li>
+        </ul>
+      </article>
+
+      <!-- HPE -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">L4 SAN & Storage Engineer (Release Team, Contractor Seiteq) — Hewlett Packard Enterprise</h3>
+            <div class="job__meta">
+              <span>Mar 2015 – Apr 2017</span><span class="dot">•</span>
+              <span>Bratislava, Slovakia</span>
+            </div>
+          </div>
+          <div class="job__tag">VPC • Reliability</div>
+        </div>
+        <p class="p">
+          Provided SAN/storage and cloud consultancy for VPC programme; delivered features and stability in Agile/Scrum release teams.
+        </p>
+        <ul class="bullets">
+          <li>SAN/storage designs, upgrades (3PAR OS, SAN firmware/config), and performance tuning.</li>
+          <li>L4 outage support and last-line escalation; backup/restore and disaster recovery execution.</li>
+          <li>Security initiatives aligned to corporate policies and ISO 27000 requirements.</li>
+        </ul>
+      </article>
+
+      <!-- Fidelity -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">2nd Level Desktop Support (Contractor PFH) — Fidelity Investments</h3>
+            <div class="job__meta">
+              <span>Nov 2014 – Mar 2015</span><span class="dot">•</span>
+              <span>Ireland</span>
+            </div>
+          </div>
+          <div class="job__tag">On-site • IT Ops</div>
+        </div>
+        <ul class="bullets">
+          <li>Owned incident queue and on-site meeting room readiness; quick diagnostics/fixes.</li>
+          <li>Administered Avaya Site Administration; managed extensions and resolved voice issues.</li>
+          <li>Imaging/builds, onboarding, asset tracking, printers, and mobile device support.</li>
+        </ul>
+      </article>
+
+      <!-- Savenet -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">Infrastructure Engineer (Contract) — Savenet Solutions</h3>
+            <div class="job__meta">
+              <span>May 2014 – Oct 2014</span><span class="dot">•</span>
+              <span>Ireland</span>
+            </div>
+          </div>
+          <div class="job__tag">MSP • DR</div>
+        </div>
+        <ul class="bullets">
+          <li>Windows desktop builds/app packaging and rollouts; Windows Server/AD/GPO administration.</li>
+          <li>Engineered SAN/network solutions; vSphere administration and VM operations.</li>
+          <li>Created and tested disaster recovery plans; SQL Server maintenance and backups.</li>
+        </ul>
+      </article>
+
+      <!-- HP (Tech Solutions Consultant II) -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">Technical Solutions Consultant II — Hewlett-Packard</h3>
+            <div class="job__meta">
+              <span>Sep 2012 – May 2014</span><span class="dot">•</span>
+              <span>Ireland</span>
+            </div>
+          </div>
+          <div class="job__tag">SAN/Storage • EMEA</div>
+        </div>
+        <ul class="bullets">
+          <li>Level-2/3 SAN & storage support: Brocade FC, HPE 3PAR, EVA, MSA, tape/VLS.</li>
+          <li>Performance analysis, firmware/patch guidance, maintenance window support.</li>
+          <li>Lab/datacentre equipment ownership for testing, training, and knowledge transfer.</li>
+        </ul>
+      </article>
+
+      <!-- IBM 2009-2012 -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">Delivery Compliance Administrator & L3 Windows Troubleshooting — IBM</h3>
+            <div class="job__meta">
+              <span>Jul 2009 – Oct 2012</span><span class="dot">•</span>
+              <span>Brno, Czech Republic</span>
+            </div>
+          </div>
+          <div class="job__tag">Compliance • Windows SME</div>
+        </div>
+        <ul class="bullets">
+          <li>Security-compliance administration and deep Windows troubleshooting (NT/2000/2003/2008).</li>
+          <li>Supported core services and middleware stacks; audits/remediation aligned to IBM policies.</li>
+          <li>SME for security tools (e.g., BigFix/TEM), hardening projects, and escalation support.</li>
+        </ul>
+      </article>
+
+      <!-- IBM 2007-2008 -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">2nd Level IT Specialist (Break/Fix) — IBM</h3>
+            <div class="job__meta">
+              <span>Oct 2007 – Sep 2008</span><span class="dot">•</span>
+              <span>Dublin, Ireland</span>
+            </div>
+          </div>
+          <div class="job__tag">Desktop • KB Articles</div>
+        </div>
+        <ul class="bullets">
+          <li>Second-line desktop support (Windows XP), connectivity, Outlook, Lotus Notes, Office apps.</li>
+          <li>Authored KB articles and troubleshooting guides; collaborated with network/server teams.</li>
+        </ul>
+      </article>
+
+      <!-- Fujitsu Finland -->
+      <article class="job">
+        <div class="job__head">
+          <div>
+            <h3 class="h3">IT Specialist — Fujitsu Finland</h3>
+            <div class="job__meta">
+              <span>Jun 2006 – Sep 2007</span><span class="dot">•</span>
+              <span>Finland</span>
+            </div>
+          </div>
+          <div class="job__tag">On-site • Hardware</div>
+        </div>
+        <ul class="bullets">
+          <li>On-site hardware repair and end-user support across multiple client companies.</li>
+          <li>Small-scale rollout projects: scheduling, logistics, and vendor coordination.</li>
+          <li>Documented procedures and asset records to improve future maintenance.</li>
+        </ul>
+      </article>
+
+      <div class="printnote">
+        Tip: In the print dialog, choose <strong>Save as PDF</strong>. Set margins to <strong>Default</strong>.
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <div class="footer__text">
+        <span>Kim Harjamäki — Azure • DevOps • Automation</span>
+        <span class="dot">•</span>
+        <span>Last updated: <span id="lastUpdated"></span></span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Lightweight, ATS-safe. Only fills the date.
+    const d = new Date();
+    const fmt = d.toISOString().slice(0,10);
+    document.getElementById("lastUpdated").textContent = fmt;
+  </script>
 </body>
 </html>
