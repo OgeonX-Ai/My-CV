@@ -99,20 +99,21 @@ a:hover { color: #fff; }
 .hero {
   padding: 28px 0 10px;
 }
-.hero-inner {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  justify-content: space-between;
+.hero__card {
   border: 1px solid var(--border);
   background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
   backdrop-filter: blur(10px);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 22px;
+  display: grid;
+  gap: 16px;
 }
-.hero-left { flex: 1; }
-.hero-right { width: min(320px, 100%); display: grid; gap: 10px; }
+.hero__header { display: grid; gap: 6px; }
+.hero__stack {
+  display: grid;
+  gap: 10px;
+}
 
 .h1 {
   margin: 0 0 6px;
@@ -199,6 +200,15 @@ a:hover { color: #fff; }
 .pilllist--wrap { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .pilllist--columns { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
+.cleanlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
 .currentwork__list {
   list-style: none;
   padding: 0;
@@ -213,6 +223,10 @@ a:hover { color: #fff; }
   background: rgba(255,255,255,0.04);
   border-radius: 12px;
   padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 .kpi__label {
   color: var(--muted2);
@@ -222,7 +236,7 @@ a:hover { color: #fff; }
 }
 .kpi__value {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .job {
@@ -281,8 +295,7 @@ a:hover { color: #fff; }
 .footer__text { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 
 @media (max-width: 860px) {
-  .hero-inner { flex-direction: column; }
-  .hero-right { width: 100%; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .hero__card { padding: 20px; }
   .job__head { flex-direction: column; }
 }
 
@@ -290,7 +303,7 @@ a:hover { color: #fff; }
   body { background: #fff !important; color: #000 !important; }
   a { color: #000 !important; text-decoration: underline; }
   .topbar, .btn { display: none !important; }
-  .hero-inner, .card {
+  .hero__card, .card {
     background: #fff !important;
     border: 1px solid #ddd !important;
     box-shadow: none !important;
