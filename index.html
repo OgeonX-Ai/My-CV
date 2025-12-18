@@ -12,7 +12,7 @@
   <a class="skip" href="#content">Skip to content</a>
 
   <header class="topbar">
-    <div class="wrap topbar__inner">
+    <div class="container topbar__inner">
       <div class="brand">
         <div class="brand__name">Kim Harjamäki</div>
         <div class="brand__role">Azure Architect • Senior DevOps Engineer • Cloud & Automation</div>
@@ -27,12 +27,12 @@
     </div>
   </header>
 
-  <main id="content" class="wrap">
-    <section class="hero card">
-      <div class="hero__grid">
-        <div>
+  <main id="content" class="container">
+    <section class="hero">
+      <div class="card hero-inner">
+        <div class="hero-left">
           <h1 class="h1">Kim Harjamäki</h1>
-          <p class="subtitle">Azure Architect & Senior DevOps Engineer</p>
+          <p class="subtitle hero-title">Azure Architect & Senior DevOps Engineer</p>
 
           <div class="meta">
             <span>Helsinki, Finland</span>
@@ -42,10 +42,6 @@
             <a href="https://github.com/OgeonX-Ai" target="_blank" rel="noreferrer">GitHub</a>
             <span class="dot">•</span>
             <a href="https://ogeonx-ai.github.io/kim-ai-voice-demo/" target="_blank" rel="noreferrer">AI Voice Demo (WIP)</a>
-            <!-- Optional email:
-            <span class="dot">•</span>
-            <a href="mailto:you@email.com">you@email.com</a>
-            -->
           </div>
 
           <div class="chips">
@@ -58,7 +54,7 @@
           </div>
         </div>
 
-        <aside class="hero__aside">
+        <aside class="hero-right">
           <div class="kpi">
             <div class="kpi__label">Experience</div>
             <div class="kpi__value">20+ years</div>
@@ -75,8 +71,18 @@
       </div>
     </section>
 
-    <section class="grid">
-      <section class="card">
+    <section class="content">
+      <section id="certifications" class="card">
+        <h2 class="h2">Certifications</h2>
+        <ul class="pilllist pilllist--wrap">
+          <li>Microsoft Certified: Azure Solutions Architect Expert</li>
+          <li>Microsoft Certified: DevOps Engineer Expert (AZ-400)</li>
+          <li>HashiCorp Certified: Terraform Associate</li>
+          <li>ITIL Foundation</li>
+        </ul>
+      </section>
+
+      <section id="summary" class="card">
         <h2 class="h2">Summary</h2>
         <p class="p">
           With 20+ years in IT, I design and build scalable Azure and DevOps environments with a strong focus on automation,
@@ -90,40 +96,8 @@
       </section>
 
       <section class="card">
-        <h2 class="h2">Contact</h2>
-        <ul class="contact__list">
-          <li class="contact__item">
-            <span class="contact__label">Location</span>
-            <span>Helsinki, Finland</span>
-          </li>
-          <li class="contact__item">
-            <span class="contact__label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/kim-harjamaki/" target="_blank" rel="noreferrer">/kim-harjamaki</a>
-          </li>
-          <li class="contact__item">
-            <span class="contact__label">GitHub</span>
-            <a href="https://github.com/OgeonX-Ai" target="_blank" rel="noreferrer">github.com/OgeonX-Ai</a>
-          </li>
-          <li class="contact__item">
-            <span class="contact__label">Portfolio</span>
-            <a href="https://ogeonx-ai.github.io/kim-ai-voice-demo/" target="_blank" rel="noreferrer">AI Voice Demo (WIP)</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2 class="h2">Certifications</h2>
-        <ul class="certifications__list">
-          <li>Microsoft Certified: Azure Solutions Architect Expert</li>
-          <li>Microsoft Certified: DevOps Engineer Expert (AZ-400)</li>
-          <li>HashiCorp Certified: Terraform Associate</li>
-          <li>ITIL Foundation</li>
-        </ul>
-      </section>
-
-      <section class="card">
         <h2 class="h2">Top Skills</h2>
-        <ul class="pilllist">
+        <ul class="pilllist pilllist--columns">
           <li>Microsoft Azure (IaaS/PaaS)</li>
           <li>Azure DevOps, GitHub Actions, CI/CD</li>
           <li>IaC: Terraform, Bicep</li>
@@ -146,9 +120,8 @@
           </li>
         </ul>
       </section>
-    </section>
 
-    <section class="card">
+      <section class="card">
       <h2 class="h2">Experience</h2>
 
       <!-- Innofactor -->
@@ -386,6 +359,7 @@
       <div class="printnote">
         Tip: In the print dialog, choose <strong>Save as PDF</strong>. Set margins to <strong>Default</strong>.
       </div>
+      </section>
     </section>
 
     <footer class="footer">
