@@ -94,6 +94,12 @@
         </p>
       </section>
 
+      <section id="skills" class="card">
+        <h2 class="h2">Skills</h2>
+        <p class="p">Curated Azure architecture and DevOps capabilities. Open the full inventory to explore grouped skills.</p>
+        <button id="openSkillsBtn" class="btn btn--primary" type="button">View full skills list</button>
+      </section>
+
       <section class="card">
         <h2 class="h2">Top Skills</h2>
         <ul class="pilllist pilllist--columns">
@@ -361,21 +367,304 @@
       </section>
     </section>
 
-    <footer class="footer">
-      <div class="footer__line"></div>
-      <div class="footer__text">
-        <span>Kim Harjamäki — Azure • DevOps • Automation</span>
-        <span class="dot">•</span>
-        <span>Last updated: <span id="lastUpdated"></span></span>
+  <footer class="footer">
+    <div class="footer__line"></div>
+    <div class="footer__text">
+      <span>Kim Harjamäki — Azure • DevOps • Automation</span>
+      <span class="dot">•</span>
+      <span>Last updated: <span id="lastUpdated"></span></span>
+    </div>
+  </footer>
+</main>
+
+  <div id="skillsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="skillsModalTitle" aria-hidden="true">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__dialog" role="document">
+      <header class="modal__header">
+        <div>
+          <h2 id="skillsModalTitle" class="h2">Skills</h2>
+          <p class="p modal__subtitle">Grouped overview (click to expand)</p>
+        </div>
+        <button id="closeSkillsBtn" class="modal__close" type="button" aria-label="Close skills dialog">×</button>
+      </header>
+      <div class="modal__body" tabindex="-1">
+        <details open>
+          <summary>Azure Architecture &amp; Landing Zones</summary>
+          <ul class="skill-grid">
+            <li>Azure landing zone design (CAF)</li>
+            <li>Hub/spoke and VNet peering patterns</li>
+            <li>Subscription &amp; management group hierarchy</li>
+            <li>Resource graph and policy-driven governance</li>
+            <li>Platform automation with pipelines</li>
+            <li>Blueprint-to-Bicep migrations</li>
+            <li>Identity, connectivity, and security zones</li>
+            <li>Cost management &amp; tagging standards</li>
+            <li>Backup, DR, and BCDR runbooks</li>
+            <li>Private Link and service endpoints</li>
+            <li>Azure Firewall &amp; DDoS strategy alignment</li>
+            <li>Shared services (DNS, Key Vault, monitoring)</li>
+            <li>Hybrid connectivity (ExpressRoute/VPN)</li>
+            <li>Platform SLOs and resilience by design</li>
+            <li>Pattern library for app teams</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Networking &amp; Security (Azure)</summary>
+          <ul class="skill-grid">
+            <li>Virtual networks, subnets, UDRs</li>
+            <li>Application Gateway with WAF</li>
+            <li>Azure Firewall Premium policies</li>
+            <li>NSG/ASG microsegmentation</li>
+            <li>Private DNS zones</li>
+            <li>Front Door and CDN</li>
+            <li>Azure Bastion hardening</li>
+            <li>Key Vault with RBAC and private access</li>
+            <li>Defender for Cloud &amp; workload policies</li>
+            <li>Security Center recommendations as code</li>
+            <li>Secrets rotation automation</li>
+            <li>Compliance mapping (ISO 27000, CIS)</li>
+            <li>Storage encryption/SAS management</li>
+            <li>Web application threat modelling</li>
+            <li>Network observability with flow logs</li>
+            <li>Zero Trust segmentation approaches</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Identity &amp; Access (Entra ID / RBAC)</summary>
+          <ul class="skill-grid">
+            <li>Entra ID tenant governance</li>
+            <li>Conditional Access baselines</li>
+            <li>PIM for just-in-time admin</li>
+            <li>Workload identities and managed identities</li>
+            <li>RBAC role design and inheritance</li>
+            <li>Group-based access and entitlement reviews</li>
+            <li>App registrations and consent policies</li>
+            <li>SCIM provisioning</li>
+            <li>Cross-tenant B2B collaboration</li>
+            <li>Key Vault access policies to RBAC migration</li>
+            <li>Azure DevOps &amp; GitHub identity integration</li>
+            <li>Identity logging and risky sign-in monitoring</li>
+            <li>SAML/OIDC federation patterns</li>
+            <li>Service principal lifecycle automation</li>
+          </ul>
+        </details>
+        <details>
+          <summary>DevOps &amp; CI/CD (GitHub Actions, self-hosted runners)</summary>
+          <ul class="skill-grid">
+            <li>GitHub Actions workflow design</li>
+            <li>Self-hosted runner governance &amp; auto-scaling</li>
+            <li>OIDC federation for cloud authentication</li>
+            <li>Environment protection rules &amp; approvals</li>
+            <li>Reusable workflows &amp; composite actions</li>
+            <li>Matrix testing and artifact promotion</li>
+            <li>Pipeline security (secrets, signing, SBOM)</li>
+            <li>Branch policies and PR validation</li>
+            <li>Azure DevOps pipelines (YAML)</li>
+            <li>Release strategies: blue/green, canary</li>
+            <li>Feature flag rollouts</li>
+            <li>Automated quality gates &amp; linting</li>
+            <li>Container image build/push to ACR</li>
+            <li>GitOps patterns with Flux/Argo</li>
+            <li>Dependency scanning &amp; code QL</li>
+            <li>Service connections least-privilege</li>
+            <li>Pipeline observability and DORA metrics</li>
+          </ul>
+        </details>
+        <details>
+          <summary>IaC (Bicep, Terraform, ARM)</summary>
+          <ul class="skill-grid">
+            <li>Module design &amp; registries</li>
+            <li>Bicep VS Code workflows</li>
+            <li>Terraform Cloud/CLI with remote state</li>
+            <li>State security and drift detection</li>
+            <li>Policy-as-Code with Azure Policy</li>
+            <li>ARM/Bicep templates for landing zones</li>
+            <li>Pre/post-deployment validation</li>
+            <li>Custom providers and data sources</li>
+            <li>Config as data (YAML/JSON catalogues)</li>
+            <li>Idempotent deployment pipelines</li>
+            <li>Template testing (what-if/plan)</li>
+            <li>Secretless deployments via managed identities</li>
+            <li>Parameterization and version pinning</li>
+            <li>Shared services provisioning (Key Vault, Log Analytics)</li>
+            <li>Landing zone accelerators</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Containers &amp; Kubernetes (Docker, minikube, AKS)</summary>
+          <ul class="skill-grid">
+            <li>AKS cluster design &amp; upgrades</li>
+            <li>Nodepool lifecycle &amp; autoscaling</li>
+            <li>Container image hardening</li>
+            <li>Ingress controllers (NGINX/App Gateway)</li>
+            <li>Network policies &amp; pod security</li>
+            <li>GitHub Actions for AKS deploy</li>
+            <li>Helm chart authoring and repos</li>
+            <li>GitOps with Flux on AKS</li>
+            <li>Secrets management with CSI &amp; Key Vault</li>
+            <li>Observability via Container Insights</li>
+            <li>Dev/test with Docker Desktop &amp; minikube</li>
+            <li>ACR build tasks &amp; geo-replication</li>
+            <li>Image signing and provenance</li>
+            <li>Service mesh (Linkerd/Consul)</li>
+            <li>Backup &amp; restore (Velero)</li>
+            <li>Workload identity &amp; Azure AD auth</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Observability &amp; Ops (Azure Monitor, App Insights, logging)</summary>
+          <ul class="skill-grid">
+            <li>Log Analytics workspace design</li>
+            <li>Application Insights telemetry mapping</li>
+            <li>Kusto queries &amp; workbooks</li>
+            <li>Alert rules and action groups</li>
+            <li>Diagnostics settings as code</li>
+            <li>Distributed tracing for services</li>
+            <li>AKS insights and container logs</li>
+            <li>Prometheus/Grafana integrations</li>
+            <li>Cost and performance dashboards</li>
+            <li>Runbook automation with Logic Apps</li>
+            <li>Chaos testing and resilience drills</li>
+            <li>Incident response playbooks</li>
+            <li>Platform health baselines</li>
+            <li>Ops readiness and SLO reviews</li>
+            <li>Log retention &amp; data masking</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Data &amp; Integration (ADF, Databricks, APIs)</summary>
+          <ul class="skill-grid">
+            <li>Azure Data Factory pipelines</li>
+            <li>Databricks workspace governance</li>
+            <li>Delta Lake optimization</li>
+            <li>Synapse analytics integration</li>
+            <li>Event-driven patterns (Event Grid/Service Bus)</li>
+            <li>API management gateways</li>
+            <li>Private integration runtimes</li>
+            <li>Data pipeline CI/CD &amp; parameterization</li>
+            <li>Purview-ready metadata practices</li>
+            <li>Storage performance tiers &amp; lifecycle</li>
+            <li>ETL monitoring and alerting</li>
+            <li>Secure data landing zones</li>
+            <li>Data quality and validation rules</li>
+            <li>Python notebooks for automation</li>
+          </ul>
+        </details>
+        <details>
+          <summary>AI &amp; Automation (LLM-based triage, Gemini/OpenAI integrations)</summary>
+          <ul class="skill-grid">
+            <li>Azure OpenAI provisioning and security</li>
+            <li>Prompt engineering for DevOps copilots</li>
+            <li>LLM-based incident triage</li>
+            <li>Speech-to-text/TTS service orchestration</li>
+            <li>FastAPI backends for AI workflows</li>
+            <li>Chat orchestration with function calling</li>
+            <li>GitHub Actions automation agents</li>
+            <li>Runbook generation via AI</li>
+            <li>Azure Functions durable patterns</li>
+            <li>Integration with Gemini and Azure AI Studio</li>
+            <li>Vector store design for knowledge bases</li>
+            <li>Data privacy controls for AI workloads</li>
+            <li>Latency and cost optimization for LLM apps</li>
+            <li>AI-driven documentation pipelines</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Engineering Practices (Scrum, documentation, testing)</summary>
+          <ul class="skill-grid">
+            <li>Scrum and Kanban facilitation</li>
+            <li>Definition of Done and acceptance criteria</li>
+            <li>Architecture decision records</li>
+            <li>Runbooks and operational handovers</li>
+            <li>Test automation and shift-left QA</li>
+            <li>Peer reviews and pair programming</li>
+            <li>Service reliability reviews</li>
+            <li>Change enablement and CAB prep</li>
+            <li>Incident postmortems &amp; blameless culture</li>
+            <li>Platform documentation portals</li>
+            <li>Platform KPIs &amp; DORA metrics tracking</li>
+            <li>Release readiness checklists</li>
+            <li>Knowledge base curation</li>
+            <li>Mentoring engineers on cloud patterns</li>
+            <li>Risk assessments &amp; threat modelling</li>
+          </ul>
+        </details>
       </div>
-    </footer>
-  </main>
+    </div>
+  </div>
 
   <script>
     // Lightweight, ATS-safe. Only fills the date.
     const d = new Date();
     const fmt = d.toISOString().slice(0,10);
     document.getElementById("lastUpdated").textContent = fmt;
+
+    // Skills modal logic
+    const skillsModal = document.getElementById("skillsModal");
+    const openSkillsBtn = document.getElementById("openSkillsBtn");
+    const closeSkillsBtn = document.getElementById("closeSkillsBtn");
+    const modalFocusableSelector = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
+    let lastFocusedElement = null;
+
+    function trapFocus(event) {
+      if (!skillsModal.classList.contains("is-open")) return;
+      if (event.key !== "Tab") return;
+
+      const focusableNodes = Array.from(skillsModal.querySelectorAll(modalFocusableSelector))
+        .filter(el => el.offsetParent !== null || el instanceof HTMLAreaElement);
+      if (focusableNodes.length === 0) return;
+
+      const first = focusableNodes[0];
+      const last = focusableNodes[focusableNodes.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    function openSkills() {
+      lastFocusedElement = document.activeElement;
+      skillsModal.classList.add("is-open");
+      skillsModal.removeAttribute("aria-hidden");
+      document.body.classList.add("no-scroll");
+      const focusable = skillsModal.querySelectorAll(modalFocusableSelector);
+      if (focusable.length) {
+        focusable[0].focus();
+      }
+      document.addEventListener("keydown", handleKeydown);
+    }
+
+    function closeSkills() {
+      skillsModal.classList.remove("is-open");
+      skillsModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+      document.removeEventListener("keydown", handleKeydown);
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    function handleKeydown(event) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeSkills();
+      } else {
+        trapFocus(event);
+      }
+    }
+
+    openSkillsBtn?.addEventListener("click", openSkills);
+    closeSkillsBtn?.addEventListener("click", closeSkills);
+
+    skillsModal.addEventListener("click", (event) => {
+      if (event.target.dataset.close === "true") {
+        closeSkills();
+      }
+    });
   </script>
 </body>
 </html>
