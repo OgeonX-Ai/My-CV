@@ -99,7 +99,7 @@ a:hover { color: #fff; }
 }
 
 .hero {
-  padding: 28px 0 10px;
+  padding: 22px 0 8px;
 }
 .hero__card {
   border: 1px solid var(--border);
@@ -107,14 +107,22 @@ a:hover { color: #fff; }
   backdrop-filter: blur(10px);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 22px;
+  padding: 18px;
   display: grid;
   gap: 16px;
 }
-.hero__header { display: grid; gap: 6px; }
+.hero__header { display: grid; gap: 5px; }
 .hero__stack {
   display: grid;
   gap: 10px;
+}
+
+@media (min-width: 900px) {
+  .hero__card {
+    grid-template-columns: 1fr 320px;
+    align-items: start;
+  }
+  .hero__stack { align-self: start; }
 }
 
 .h1 {
@@ -225,10 +233,9 @@ a:hover { color: #fff; }
   background: rgba(255,255,255,0.04);
   border-radius: 12px;
   padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  display: grid;
+  gap: 6px;
+  align-items: start;
 }
 .kpi__label {
   color: var(--muted2);
