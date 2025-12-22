@@ -420,13 +420,69 @@ a:hover { color: #fff; }
   .job__head { flex-direction: column; }
 }
 
+@page { margin: 10mm; }
+
 @media print {
-  body { background: #fff !important; color: #000 !important; }
+  /* Base */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.25 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   a { color: #000 !important; text-decoration: underline; }
+
+  /* Hide UI-only elements */
   .topbar, .btn { display: none !important; }
+
+  /* Use full printable width */
+  .container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Compact vertical spacing */
+  .hero { padding: 0 !important; }
+  .content { gap: 10px !important; padding: 0 !important; }
+
+  /* Card look for print */
   .hero__card, .card {
     background: #fff !important;
     border: 1px solid #ddd !important;
     box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    margin: 0 0 10px 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
+
+  /* Typography tightening */
+  .h1 { font-size: 22pt !important; margin: 0 0 4pt 0 !important; }
+  .h2 { margin: 0 0 6pt 0 !important; }
+  .p { margin: 0 !important; }
+
+  /* Meta + chips */
+  .meta { margin-top: 2pt !important; gap: 6px !important; }
+  .chips { margin-top: 6pt !important; gap: 6px !important; }
+  .chip {
+    background: #f4f4f4 !important;
+    color: #000 !important;
+    border: 1px solid #bbb !important;
+    padding: 2pt 7pt !important;
+    font-size: 9pt !important;
+  }
+
+  /* KPI compaction */
+  .hero__stack { gap: 6px !important; }
+  .kpi { padding: 8pt 10pt !important; }
+
+  /* Page-break hygiene */
+  section { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  ul, li { break-inside: avoid; page-break-inside: avoid; }
 }
