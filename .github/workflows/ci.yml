@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML structure
+        run: |
+          node -e "
+          const fs = require('fs');
+          const html = fs.readFileSync('index.html', 'utf8');
+          const checks = ['<!doctype html>', '<title>', '</html>'];
+          checks.forEach(c => {
+            if (!html.toLowerCase().includes(c.toLowerCase())) {
+              console.error('Missing: ' + c); process.exit(1);
+            }
+          });
+          console.log('HTML structure valid');
+          "
